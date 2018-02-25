@@ -23,21 +23,6 @@ func float64exp2(p uint64) (uint64) {
 * Results from macOS w/ Intel 2.3GHz i5-7360U processor
 
 ```
-go test -bench=Uint
-
-goos: darwin
-goarch: amd64
-pkg: github.com/ear7h/go-exp2test
-BenchmarkUint0-4    	1000000000	         2.25 ns/op
-BenchmarkUint4-4    	1000000000	         2.39 ns/op
-BenchmarkUint16-4   	1000000000	         2.27 ns/op
-BenchmarkUint32-4   	1000000000	         2.34 ns/op
-BenchmarkUint63-4   	1000000000	         2.25 ns/op
-PASS
-ok  	github.com/ear7h/go-exp2test	12.671s
-```
-
-```
 go test -bench=Float
 
 goos: darwin
@@ -50,4 +35,19 @@ BenchmarkFloat32-4   	50000000	        29.3 ns/op
 BenchmarkFloat63-4   	50000000	        31.4 ns/op
 PASS
 ok  	github.com/ear7h/go-exp2test	7.499s
+```
+
+```
+go test -bench=Uint
+
+goos: darwin
+goarch: amd64
+pkg: github.com/ear7h/go-exp2test
+BenchmarkUint0-4    	1000000000	         2.25 ns/op
+BenchmarkUint4-4    	1000000000	         2.39 ns/op
+BenchmarkUint16-4   	1000000000	         2.27 ns/op
+BenchmarkUint32-4   	1000000000	         2.34 ns/op
+BenchmarkUint63-4   	1000000000	         2.25 ns/op
+PASS
+ok  	github.com/ear7h/go-exp2test	12.671s
 ```
